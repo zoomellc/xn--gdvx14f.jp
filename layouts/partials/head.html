@@ -1,0 +1,25 @@
+<head>
+    {{- partial "analytics" . -}}
+    {{- if .Site.Params.Analytics.Yandexmetrica.Enabled -}}
+    {{ partial "metrica.html" . }}
+    {{- end -}}
+    <title>{{if .IsHome}}{{site.Title}} - {{.Title}}{{else}}{{.Title}}{{end}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/favicon/apple-touch-icon.webp" | relURL }}">
+    <link rel="icon" type="image/webp" href="{{ "/favicon/favicon.webp" | relURL }}" sizes="16x16 32x32 96x96 192x192">
+    <meta name="theme-color" content="#212936">
+    <meta property="og:title" content="{{site.Title}}{{if not .IsHome}} | {{.Title}}{{end}}" />
+    {{ $styles := resources.Get "css/style.css" | postCSS }}
+    {{- if .Site.IsServer -}}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+    {{- else -}}
+    {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+    {{- end }}
+    <link href=' {{ "/css/blonde.min.css" | relURL }}' rel="stylesheet" type="text/css" media="print" onload="this.media=' all'">
+    {{- partial "seo/print.html" . -}}
+    {{- block "header_css" . -}}{{- end -}}
+    <link rel="stylesheet" href='{{ "/css/custom.css" | relURL }}'>
+    <i class="dark hidden"></i>
+</head>

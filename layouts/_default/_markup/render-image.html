@@ -1,0 +1,7 @@
+{{- $image := .Destination -}}
+{{- $alt := .PlainText | safeHTML -}}
+{{- $width := 600 -}}
+{{- $height := 300 -}}
+<figure>
+  <img src="{{ $image }}" alt="{{ $alt }}" width="{{  $width }}" height="{{ $height }}" class="w-full">
+</figure>

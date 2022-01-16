@@ -1,0 +1,79 @@
+/* 
+ This CSS file is used to override the existing styles of the theme.
+ You can change the article headings, fonts, colors, etc.
+*/
+
+ol,
+ul,
+li,
+menu {
+  list-style: inherit;
+  margin-left: 1em;
+}
+
+ol {
+	list-style: decimal;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.content td {
+  font-size: 1.1em;
+  border: 0px;
+}
+
+.content a {
+	text-decoration: underline;
+}
+
+.content .footnote-backref {
+	text-decoration: none;
+}
+
+.content .footnote-ref {
+	text-decoration: none;
+}
+
+.content .footnote-backref {
+	text-decoration: none;
+}
+
+.respectful{
+	color: #F44336;
+}
+.humble{
+	color: #4CAF50;
+}
+.polite{
+	color: #2196F3;
+}
+
+.icon{
+	width: 120px;
+	height: 120px;
+}
+
+.appstore-button{
+	width: 122px;
+	height: 45px;
+}
+
+.googleplay-button{
+	width: 151px;
+	height: 45px;
+}
+
+#categories {
+	float: left;
+}
+
+#history {
+	text-align: right;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}

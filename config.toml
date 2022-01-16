@@ -1,0 +1,94 @@
+baseURL = "https://xn--gdvx14f.jp/"
+title = "敬語.jp"
+languageCode = "ja"
+DefaultContentLanguage = "ja"
+enableInlineShortcodes = true
+theme = "Blonde"
+enableRobotsTXT = true
+hasCJKLanguage = true
+
+[markup.goldmark.renderer]
+    unsafe= true
+
+[params]
+    twitter_user = "keigohonnyaku"
+    description = "「誰でも敬語を使いこなせるようになる」ことを目指したブログです。難しい敬語、勘違いされやすい敬語、二重敬語などを中心に、分かりやすく解説しています。"
+    base_color = "bg-gray-800"    
+    paginator_pages = "10"
+    archive_dropdown = "false"
+    tagsLimit = 0
+    darkmode = "light"
+
+    [params.post]
+        thumbnail = true
+        noimage = true
+        description = "10"
+        thumbnail_width = "lg:w-auto"
+        thumbnail_height = "lg:h-44"
+        header_image_width="600"
+        header_image_height="400"
+
+    [params.widgets]
+        display = true
+        widgets = ["search", "category", "honorificconverter", "recent"]
+
+    [params.history]
+        name = "更新履歴"
+        # Strip last "/"
+        baseURL = "https://github.com/zoomellc/xn--gdvx14f.jp-articles/commits/master"
+        # Strip first "."
+        extension = "md"
+
+[author]
+  name = "zoome LLC"
+
+[menu]
+    [[menu.main]]
+        identifier = "home"
+        name = "ホーム"
+        url = "/"
+        weight = 1
+
+    [[menu.main]]
+        identifier = "about"
+        name = "敬語.jpについて"
+        url = "/概要/"
+        weight = 2
+
+    [[menu.main]]
+        identifier = "contact"
+        name = "お問い合わせ"
+        url = "/お問い合わせ/"
+        weight = 3
+
+[taxonomies]
+    category = "categories"
+    archive = "archives"
+
+[permalinks]
+    post = "/:filename/"
+
+[privacy]
+    [privacy.vimeo]
+        disabled = false
+        simple = true
+
+    [privacy.twitter]
+        disabled = false
+        enableDNT = true
+        simple = true
+
+    [privacy.instagram]
+        disabled = false
+        simple = true
+
+    [privacy.youtube]
+        disabled = false
+        privacyEnhanced = true
+
+[services]
+    [services.instagram]
+        disableInlineCSS = true
+
+    [services.twitter]
+        disableInlineCSS = true

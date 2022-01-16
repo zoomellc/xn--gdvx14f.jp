@@ -1,0 +1,45 @@
+<meta name="apple-itunes-app" content="app-id=1541240975">
+<script type="application/ld+json">
+[
+{{- if not .IsHome }}
+    {
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": {{ .Permalink }}
+		},
+		"headline": {{if .IsHome}}{{site.Title}}{{else}}{{.Title}}{{end}},
+		"image": [
+			{{ .Params.image | absURL }}
+		],
+		"datePublished": {{ .Date.Format "2006-01-02T08:00:00+09:00" }},
+		"dateModified": {{ .Lastmod.Format "2006-01-02T08:00:00+09:00" }},
+		"author": {
+			"@type": "Organization",
+			"name": "敬語.jp",
+			"logo": {
+				"@type": "ImageObject",
+				"url": {{ "/favicon/favicon.png" | absURL }}
+			},
+			"url": {{ .Site.BaseURL }}
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "敬語.jp",
+			"logo": {
+				"@type": "ImageObject",
+				"url": {{ "/favicon/favicon.png" | absURL }}
+			}
+		}
+    },
+	{{- else }}
+	{
+		"@context": "http://schema.org",
+		"@type":"Organization",
+		"url": {{ .Site.BaseURL }},
+		"logo": {{ "/favicon/favicon.png" | absURL }}
+	}
+	{{- end }}
+]
+</script>
