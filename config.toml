@@ -63,7 +63,6 @@ hasCJKLanguage = true
 
 [taxonomies]
     category = "categories"
-    archive = "archives"
 
 [permalinks]
     post = "/:filename/"
