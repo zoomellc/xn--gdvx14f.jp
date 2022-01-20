@@ -41,6 +41,7 @@ hasCJKLanguage = true
 
 [author]
   name = "zoome LLC"
+  url = "https://zoome.co.jp"
 
 [menu]
     [[menu.main]]
