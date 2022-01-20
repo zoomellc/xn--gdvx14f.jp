@@ -74,10 +74,13 @@
                 {{ end }}
             </div>
         </div>
-        <div class="bg-white dark:bg-warmgray-900 p-5 my-4">
-            <div class="mb-3">
-                {{ template "_internal/disqus.html" . }}
-            </div>
+        <div class="m-3">
+            <a class="lg:text-2xl" href="{{.Site.BaseURL }}">
+                <div
+                    class="transition-colors duration-300 border border-gray-600 hover:border-black h-auto text-center py-3">
+                    {{ .Site.Params.back_to_home }}
+                </div>
+            </a>
         </div>
     </div>
     {{ if .Site.Params.widgets.display }}
