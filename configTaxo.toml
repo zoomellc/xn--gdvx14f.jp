@@ -4,7 +4,6 @@ enableInlineShortcodes = true
 [taxonomies]
 category = "categories"
 tag = "tags"
-archives = "archives"
 
 [privacy]
 
