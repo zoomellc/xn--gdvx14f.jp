@@ -10,9 +10,14 @@
 			"@id": {{ .Permalink }}
 		},
 		"headline": {{if .IsHome}}{{site.Title}}{{else}}{{.Title}}{{end}},
+		{{ with  $schema_images := .Params.schema_images -}}
 		"image": [
-			{{ .Params.image | absURL }}
+		{{- $schema_images_len := (len $schema_images)  -}}
+		{{- range $index, $item :=  $schema_images -}}
+			{{ . | absURL }}{{ if ne (add $index 1)  $schema_images_len }},{{ end }}
+			{{- end -}}
 		],
+		{{ end -}}
 		"datePublished": {{ .Date.Format "2006-01-02T08:00:00+09:00" }},
 		"dateModified": {{ .Lastmod.Format "2006-01-02T08:00:00+09:00" }},
 		"author": {
