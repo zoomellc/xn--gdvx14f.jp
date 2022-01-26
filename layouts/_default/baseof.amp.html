@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<html ⚡>
+{{ partial "head.amp.html" .}}
+
+<body class="font-sans">
+        {{- partial "header.amp.html" . -}}
+        <div class="container" id="content">
+            {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "footer.amp.html" . -}}
+</body>
+</html>

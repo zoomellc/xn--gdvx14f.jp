@@ -51,8 +51,9 @@
 {{- with .Params.seo.canonical -}}
   {{- $.Scratch.SetInMap "seo" "canonical" (. | absURL) -}}
 {{- else -}}
-{{- $.Scratch.SetInMap "seo" "canonical" .Permalink -}}
+{{- $.Scratch.SetInMap "seo" "canonical" ( replace .Permalink "/amp" "") -}}
 {{- end -}}
+{{- $.Scratch.SetInMap "seo" "amphtml"  ( replace .Permalink .Site.BaseURL ( printf "%samp/" .Site.BaseURL ) ) -}}
 {{- partial "seo/extend" . -}}
 {{ partial "seo/tags" (dict "page" $ "seo" ($.Scratch.Get "seo")) }}
 {{ with .Site.Params.seo.jsonld }}

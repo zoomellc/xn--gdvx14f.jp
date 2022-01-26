@@ -1,0 +1,14 @@
+<footer class="{{ .Site.Params.base_color }} text-white p-6">
+    {{ if .Site.Menus.foot }}
+    <div class="flex justify-center w-full md:flex md:flex-row sm:items-center sm:w-auto mb-4">
+        <div>
+            {{ range .Site.Menus.foot }}
+            <a href="{{ .URL }}"
+                class="no-underline block sm:inline-block duration-200 text-white hover:opacity-50">
+                {{ .Name }}
+            </a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</footer>

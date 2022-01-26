@@ -26,8 +26,9 @@ hasCJKLanguage = true
         description = "10"
         thumbnail_width = "lg:w-auto"
         thumbnail_height = "lg:h-44"
-        header_image_width="600"
-        header_image_height="400"
+        header_image_width=600
+        header_image_height=400
+        amp_padding=32
 
     [params.widgets]
         display = true
@@ -93,3 +94,6 @@ hasCJKLanguage = true
 
     [services.twitter]
         disableInlineCSS = true
+
+[outputs]
+    page = [ "HTML", "AMP" ]

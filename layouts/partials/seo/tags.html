@@ -7,7 +7,10 @@
 <meta property="og:locale" content="{{ $seo.locale }}">
 <meta name="twitter:card" content="{{ $seo.twitter_card }}">
 <meta name="twitter:site" content="{{ $seo.twitter_handle }}">
-{{ with $seo.canonical }}
+{{- with $seo.canonical }}
 <link rel="canonical" href="{{ . }}">
-{{ end }}
+{{- end }}
+{{- with $seo.amphtml }}
+<link rel="amphtml" href="{{ . }}">
+{{- end }}
 <meta name="twitter:description" content="{{- $seo.description }}">

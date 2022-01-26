@@ -1,0 +1,5 @@
+{{- $image := .Destination -}}
+{{- $alt := .PlainText | safeHTML -}}
+{{- $width := 600 -}}
+{{- $height := 300 -}}
+<amp-img src="{{ $image }}" alt="{{ $alt }}" width="{{  $width }}" height="{{ $height }}" class="w-full" layout=responsive></amp-img>
