@@ -2,6 +2,8 @@
 title: "敬語.jpについて"
 description: "敬語.jpは、「誰でも敬語をこなせるようになる」ことを目指したブログです。難しい敬語、勘違いされやすい敬語、二重敬語などを中心に、分かりやすく解説しています。"
 date: "2022-01-01"
+image: "img/3374619.webp"
+schema_images: ["img/1x1/3374619.webp", "img/4x3/3374619.webp", "img/16x9/3374619.webp"]
 aliases: ["about", "概要"]
 ---
 
