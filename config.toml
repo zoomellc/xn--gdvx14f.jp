@@ -53,13 +53,13 @@ hasCJKLanguage = true
         weight = 1
 
     [[menu.main]]
-        identifier = "about"
+        identifier = "概要"
         name = "敬語.jpについて"
         url = "/概要/"
         weight = 2
 
     [[menu.main]]
-        identifier = "contact"
+        identifier = "お問い合わせ"
         name = "お問い合わせ"
         url = "/お問い合わせ/"
         weight = 3
@@ -96,4 +96,4 @@ hasCJKLanguage = true
         disableInlineCSS = true
 
 [outputs]
-    page = [ "HTML", "AMP" ]
+    page = [ "AMP", "HTML" ]
