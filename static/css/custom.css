@@ -22,7 +22,14 @@ p {
 
 .content td {
   font-size: 1.1em;
-  border: 0px;
+}
+
+.content td {
+  border-color: #e2e8f0;
+}
+
+.dark .content td {
+  border-color: #26272a;
 }
 
 .content a {
