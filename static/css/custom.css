@@ -67,6 +67,16 @@ p {
 	color: #2196F3;
 }
 
+.content .footnotes .respectful{
+	color: inherit;
+}
+.content .footnotes .humble{
+	color: inherit;
+}
+.content .footnotes .polite{
+	color: inherit;
+}
+
 .icon{
 	width: 120px;
 	height: 120px;
