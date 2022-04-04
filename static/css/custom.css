@@ -20,6 +20,10 @@ p {
 	margin-bottom: 0.5em;
 }
 
+blockquote {
+	word-break: break-all;
+}
+
 .content td {
   font-size: 1.1em;
 }
