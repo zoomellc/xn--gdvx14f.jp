@@ -67,6 +67,9 @@ blockquote {
 .humble{
 	color: #4CAF50;
 }
+.courteous{
+	color: #00BFA5;
+}
 .polite{
 	color: #2196F3;
 }
@@ -75,6 +78,9 @@ blockquote {
 	color: inherit;
 }
 .content .footnotes .humble{
+	color: inherit;
+}
+.content .footnotes .courteous{
 	color: inherit;
 }
 .content .footnotes .polite{
