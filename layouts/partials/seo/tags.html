@@ -11,6 +11,7 @@
 <link rel="canonical" href="{{ . }}">
 {{- end }}
 {{- with $seo.amphtml }}
-<link rel="amphtml" href="{{ . }}">
+{{/* Comment out because it is not displayed correctly in Yahoo! JAPAN */}}
+{{/* <link rel="amphtml" href="{{ . }}"> */}}
 {{- end }}
 <meta name="twitter:description" content="{{- $seo.description }}">
