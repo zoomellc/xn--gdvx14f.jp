@@ -24,6 +24,9 @@
     <i class="dark hidden"></i>
     <style>
     @media (min-width: 640px) {
+        .ad-mobile-only {
+            display: block;
+        }
         .ad-in-article {
             width: 480px;
             height: 320px;
@@ -31,6 +34,9 @@
     }
     
     @media (min-width: 1024px) {
+        .ad-mobile-only {
+            display: none;
+        }
         .ad-in-article {
             width: inherit;
             height: 200px;
@@ -38,6 +44,9 @@
     }
     
     @media (min-width: 768px) {
+        .ad-mobile-only {
+            display: none;
+        }
         .ad-in-article {
             width: inherit;
             height: 200px;
