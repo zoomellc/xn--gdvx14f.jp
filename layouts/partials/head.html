@@ -22,6 +22,49 @@
     {{- block "header_css" . -}}{{- end -}}
     <link rel="stylesheet" href='{{ "/css/custom.css" | relURL }}'>
     <i class="dark hidden"></i>
+    <script>
+        // Original: https://www.bugbugnow.net/2019/05/GoogleAdSense-lazy-loading.html
+        (function(window, document) {
+          function main() {
+            // GoogleAdSense読込み
+            var ad = document.createElement('script');
+            ad.type = 'text/javascript';
+            ad.async = true;
+            ad.crossorigin = 'anonymous';
+            ad.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?ca-pub-9210683769458396';
+            var sc = document.getElementsByTagName('script')[0];
+            sc.parentNode.insertBefore(ad, sc);
+          }
+        
+          // 遅延読込み
+          var lazyLoad = false;
+          function onLazyLoad() {
+            if (lazyLoad === false) {
+              // 複数呼び出し回避 + イベント解除
+              lazyLoad = true;
+              window.removeEventListener('scroll', onLazyLoad);
+              window.removeEventListener('mousemove', onLazyLoad);
+              window.removeEventListener('mousedown', onLazyLoad);
+              window.removeEventListener('touchstart', onLazyLoad);
+              window.removeEventListener('keydown', onLazyLoad);
+        
+              main();
+            }
+          }
+          window.addEventListener('scroll', onLazyLoad);
+          window.addEventListener('mousemove', onLazyLoad);
+          window.addEventListener('mousedown', onLazyLoad);
+          window.addEventListener('touchstart', onLazyLoad);
+          window.addEventListener('keydown', onLazyLoad);
+          window.addEventListener('load', function() {
+            // ドキュメント途中（更新時 or ページ内リンク）
+            if (window.pageYOffset) {
+              onLazyLoad();
+            }
+          });
+        })(window, document);
+    </script>
+
     <style>
     @media (min-width: 640px) {
         .ad-mobile-only {
