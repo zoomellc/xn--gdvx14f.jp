@@ -74,6 +74,22 @@ blockquote {
 	color: #2196F3;
 }
 
+.content blockquote .respectful {
+	color: inherit;
+}
+
+.content blockquote .humble {
+	color: inherit;
+}
+
+.content blockquote .courteous {
+	color: inherit;
+}
+
+.content blockquote .polite {
+	color: inherit;
+}
+
 .content .footnotes .respectful{
 	color: inherit;
 }
