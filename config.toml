@@ -37,7 +37,7 @@ hasCJKLanguage = true
     [params.history]
         name = "更新履歴"
         # Strip last "/"
-        baseURL = "https://github.com/zoomellc/xn--gdvx14f.jp-articles/commits/master"
+        baseURL = "https://github.com/zoomellc/xn--gdvx14f.jp-articles/commits/main"
         # Strip first "."
         extension = "md"
 
