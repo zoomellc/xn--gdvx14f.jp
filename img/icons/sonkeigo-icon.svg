@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="sonkeigo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e9d5ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- 尊敬語のアイコン: 上向きの矢印と人物 -->
+  <circle cx="32" cy="32" r="30" fill="url(#sonkeigo-grad)" opacity="0.2"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="#a855f7" stroke-width="2"/>
+  <!-- 人物のシルエット -->
+  <path d="M32 20 C36 20 39 23 39 27 C39 31 36 34 32 34 C28 34 25 31 25 27 C25 23 28 20 32 20 Z" fill="#7e22ce"/>
+  <path d="M24 44 C24 40 28 36 32 36 C36 36 40 40 40 44 L40 48 L24 48 Z" fill="#7e22ce"/>
+  <!-- 上向き矢印 -->
+  <path d="M32 10 L38 16 L35 16 L35 24 L29 24 L29 16 L26 16 Z" fill="#a855f7"/>
+</svg>

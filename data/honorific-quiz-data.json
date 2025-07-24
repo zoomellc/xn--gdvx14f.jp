@@ -1,0 +1,218 @@
+{
+  "quizData": {
+    "beginner": [
+      {
+        "id": "beginner-1",
+        "question": "次の文章の敬語は正しいですか？",
+        "sentence": "課長、了解しました。",
+        "options": [
+          {
+            "text": "正しい",
+            "correct": false,
+            "explanation": "「了解しました」は同等または目下の人に使う表現です。"
+          },
+          {
+            "text": "間違っている",
+            "correct": true,
+            "explanation": "正解！上司には「承知いたしました」や「かしこまりました」を使います。"
+          }
+        ],
+        "category": "尊敬語と謙譲語",
+        "explanation": "上司に対しては、より丁寧な「承知いたしました」「かしこまりました」を使いましょう。"
+      },
+      {
+        "id": "beginner-2",
+        "question": "「見る」の尊敬語はどれですか？",
+        "options": [
+          {
+            "text": "拝見する",
+            "correct": false,
+            "explanation": "「拝見する」は謙譲語です。"
+          },
+          {
+            "text": "ご覧になる",
+            "correct": true,
+            "explanation": "正解！「ご覧になる」は「見る」の尊敬語です。"
+          },
+          {
+            "text": "見られる",
+            "correct": false,
+            "explanation": "「見られる」も尊敬語として使えますが、「ご覧になる」の方がより丁寧です。"
+          }
+        ],
+        "category": "基本敬語",
+        "explanation": "「見る」の尊敬語は「ご覧になる」、謙譲語は「拝見する」です。"
+      },
+      {
+        "id": "beginner-3",
+        "question": "「食べる」の尊敬語はどれですか？",
+        "options": [
+          {
+            "text": "いただく",
+            "correct": false,
+            "explanation": "「いただく」は謙譲語です。"
+          },
+          {
+            "text": "召し上がる",
+            "correct": true,
+            "explanation": "正解！「召し上がる」は「食べる」の尊敬語です。"
+          },
+          {
+            "text": "食べられる",
+            "correct": false,
+            "explanation": "「食べられる」も尊敬語として使えますが、「召し上がる」の方がより丁寧です。"
+          }
+        ],
+        "category": "基本敬語",
+        "explanation": "「食べる」の尊敬語は「召し上がる」、謙譲語は「いただく」です。"
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "intermediate-1",
+        "question": "次の文章の敬語は正しいですか？",
+        "sentence": "お客様がお見えになられました。",
+        "options": [
+          {
+            "text": "正しい",
+            "correct": false,
+            "explanation": "「お見えになる」はすでに尊敬語なので、「られる」を付けると二重敬語になります。"
+          },
+          {
+            "text": "間違っている",
+            "correct": true,
+            "explanation": "正解！「お見えになりました」が正しい表現です。"
+          }
+        ],
+        "category": "二重敬語",
+        "explanation": "二重敬語は避けるべきです。「お見えになる」だけで十分な尊敬表現となります。"
+      },
+      {
+        "id": "intermediate-2",
+        "question": "「させていただく」の使い方として適切なのはどれですか？",
+        "options": [
+          {
+            "text": "本日は休業させていただきます",
+            "correct": false,
+            "explanation": "相手の許可を必要としない場合は「休業いたします」で十分です。"
+          },
+          {
+            "text": "資料を拝見させていただいてもよろしいでしょうか",
+            "correct": true,
+            "explanation": "正解！相手の許可を求める場合は適切な使い方です。"
+          },
+          {
+            "text": "私は田中と申させていただきます",
+            "correct": false,
+            "explanation": "「申します」で十分です。過剰な敬語表現になっています。"
+          }
+        ],
+        "category": "適切な敬語使用",
+        "explanation": "「させていただく」は相手の許可や恩恵を受ける場合に使います。"
+      },
+      {
+        "id": "intermediate-3",
+        "question": "ビジネスメールの結びとして最も適切なのはどれですか？",
+        "options": [
+          {
+            "text": "よろしくお願い致します",
+            "correct": false,
+            "explanation": "「致します」は補助動詞なので、ひらがなで「いたします」と書きます。"
+          },
+          {
+            "text": "よろしくお願いいたします",
+            "correct": true,
+            "explanation": "正解！補助動詞はひらがなで表記するのが正しいです。"
+          },
+          {
+            "text": "宜しくお願い致します",
+            "correct": false,
+            "explanation": "「宜しく」「致します」ともに不適切です。ひらがなで書きましょう。"
+          }
+        ],
+        "category": "ビジネス敬語",
+        "explanation": "補助動詞の「いたす」はひらがなで、「よろしく」もひらがなが一般的です。"
+      }
+    ],
+    "advanced": [
+      {
+        "id": "advanced-1",
+        "question": "「なるほどですね」という表現について正しい説明はどれですか？",
+        "options": [
+          {
+            "text": "丁寧な相槌として適切",
+            "correct": false,
+            "explanation": "「なるほど」に「ですね」を付けるのは文法的に不自然です。"
+          },
+          {
+            "text": "誤った日本語表現",
+            "correct": true,
+            "explanation": "正解！「なるほど」は感動詞なので「ですね」は付けません。"
+          },
+          {
+            "text": "若者言葉として定着",
+            "correct": false,
+            "explanation": "誤用が広まっているだけで、正しい日本語ではありません。"
+          }
+        ],
+        "category": "誤用敬語",
+        "explanation": "「なるほど」は感動詞。「おっしゃるとおりです」などが適切です。"
+      },
+      {
+        "id": "advanced-2",
+        "question": "目上の人に意見を述べる際の適切な表現はどれですか？",
+        "options": [
+          {
+            "text": "私の意見を申し上げます",
+            "correct": false,
+            "explanation": "やや直接的すぎる表現です。"
+          },
+          {
+            "text": "僭越ながら申し上げますと",
+            "correct": true,
+            "explanation": "正解！謙虚さを示しながら意見を述べる適切な表現です。"
+          },
+          {
+            "text": "意見させていただきます",
+            "correct": false,
+            "explanation": "「意見する」に「させていただく」は不適切な組み合わせです。"
+          }
+        ],
+        "category": "ビジネス敬語",
+        "explanation": "目上の人への意見は「僭越ながら」「恐れ入りますが」などのクッション言葉を使います。"
+      },
+      {
+        "id": "advanced-3",
+        "question": "「いただきます」と「頂戴いたします」の使い分けとして正しいのは？",
+        "options": [
+          {
+            "text": "どちらも同じ意味で使い分けは不要",
+            "correct": false,
+            "explanation": "文脈によって使い分ける必要があります。"
+          },
+          {
+            "text": "「頂戴いたします」の方が丁寧",
+            "correct": false,
+            "explanation": "必ずしもそうとは限りません。"
+          },
+          {
+            "text": "物をもらう時は「頂戴いたします」、行為は「いただきます」",
+            "correct": true,
+            "explanation": "正解！物品は「頂戴」、行為や恩恵は「いただく」を使います。"
+          }
+        ],
+        "category": "敬語の使い分け",
+        "explanation": "「お茶を頂戴いたします」「ご指導いただきます」のように使い分けます。"
+      }
+    ]
+  },
+  "categories": [
+    "基本敬語",
+    "尊敬語と謙譲語",
+    "二重敬語",
+    "ビジネス敬語",
+    "適切な敬語使用",
+    "誤用敬語",
+    "敬語の使い分け"
+  ]
+}

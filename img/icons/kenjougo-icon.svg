@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="kenjougo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#bfdbfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- 謙譲語のアイコン: 下向きの矢印と人物 -->
+  <circle cx="32" cy="32" r="30" fill="url(#kenjougo-grad)" opacity="0.2"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <!-- 人物のシルエット（お辞儀している姿勢） -->
+  <path d="M32 16 C36 16 39 19 39 23 C39 27 36 30 32 30 C28 30 25 27 25 23 C25 19 28 16 32 16 Z" fill="#1d4ed8"/>
+  <path d="M24 40 C24 36 28 34 32 34 C36 34 40 36 40 40 L40 42 C40 44 38 46 36 46 L28 46 C26 46 24 44 24 42 Z" fill="#1d4ed8" transform="rotate(15 32 40)"/>
+  <!-- 下向き矢印 -->
+  <path d="M32 54 L26 48 L29 48 L29 40 L35 40 L35 48 L38 48 Z" fill="#3b82f6"/>
+</svg>

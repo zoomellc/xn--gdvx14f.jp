@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="teineigo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#bbf7d0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- 丁寧語のアイコン: ハートと会話バブル -->
+  <circle cx="32" cy="32" r="30" fill="url(#teineigo-grad)" opacity="0.2"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="#10b981" stroke-width="2"/>
+  <!-- 会話バブル -->
+  <path d="M20 20 L44 20 C46 20 48 22 48 24 L48 36 C48 38 46 40 44 40 L36 40 L32 46 L28 40 L20 40 C18 40 16 38 16 36 L16 24 C16 22 18 20 20 20 Z" fill="#059669"/>
+  <!-- ハート -->
+  <path d="M32 28 C30 24 26 24 26 28 C26 32 32 36 32 36 C32 36 38 32 38 28 C38 24 34 24 32 28 Z" fill="#bbf7d0"/>
+</svg>
