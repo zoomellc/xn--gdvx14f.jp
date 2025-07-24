@@ -3,7 +3,7 @@ title = "敬語.jp"
 languageCode = "ja"
 DefaultContentLanguage = "ja"
 enableInlineShortcodes = true
-theme = "Blonde"
+theme = "BlondeCustom"
 enableRobotsTXT = true
 hasCJKLanguage = true
 

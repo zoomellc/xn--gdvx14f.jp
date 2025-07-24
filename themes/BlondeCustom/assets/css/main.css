@@ -1,0 +1,163 @@
+/* assets */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* カスタムCSS変数 - カラースキーム */
+  :root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --info-color: #17a2b8;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --light-bg: #f8f9fa;
+    --dark-bg: #343a40;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --accent-color: #ff6b6b;
+    --keigo-respectful: #e74c3c;
+    --keigo-humble: #27ae60;
+    --keigo-polite: #3498db;
+  }
+  
+  /* ダークモード用のカラースキーム */
+  .dark {
+    --primary-color: #4dabf7;
+    --secondary-color: #adb5bd;
+    --success-color: #51cf66;
+    --info-color: #339af0;
+    --warning-color: #ffd43b;
+    --danger-color: #ff6b6b;
+    --light-bg: #1a1d21;
+    --dark-bg: #0d0f12;
+    --text-primary: #f8f9fa;
+    --text-secondary: #adb5bd;
+    --accent-color: #ff8787;
+    --keigo-respectful: #ff6b9d;
+    --keigo-humble: #51cf66;
+    --keigo-polite: #66d9ef;
+  }
+  
+  /* プロセクラスのカスタマイズ */
+  .prose {
+    @apply max-w-none;
+  }
+  
+  .prose table {
+    @apply border-collapse;
+  }
+  
+  .prose thead {
+    @apply border-b-2 border-gray-300;
+  }
+  
+  .prose th {
+    @apply px-4 py-2 text-left font-semibold;
+  }
+  
+  .prose td {
+    @apply px-4 py-2 border border-gray-200;
+  }
+  
+  .prose tr {
+    @apply border-b border-gray-200;
+  }
+  
+  /* 既存のcontentクラスのスタイルとの互換性 */
+  .content {
+    @apply prose prose-lg;
+  }
+  
+  /* 日本語フォント用の調整 */
+  .content p {
+    @apply tracking-wider;
+  }
+  
+  .content li {
+    @apply py-1;
+  }
+  
+  /* 敬語タイプの色指定 */
+  .respectful {
+    color: var(--keigo-respectful);
+    @apply font-semibold;
+  }
+  
+  .humble {
+    color: var(--keigo-humble);
+    @apply font-semibold;
+  }
+  
+  .polite {
+    color: var(--keigo-polite);
+    @apply font-semibold;
+  }
+  
+  /* 画像遅延読み込みのプレースホルダースタイル */
+  img[loading="lazy"] {
+    background-color: var(--light-bg);
+    min-height: 100px;
+  }
+  
+  img.lazy-loaded {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* レスポンシブ画像用のスタイル */
+  picture {
+    @apply block;
+  }
+  
+  /* picture要素内の画像のアスペクト比を維持 */
+  picture img {
+    @apply w-full h-auto;
+  }
+  
+  /* ダークモードのトランジション */
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* アクセントカラーを使ったボタン */
+  .btn-accent {
+    background-color: var(--accent-color);
+    color: white;
+    @apply px-4 py-2 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg;
+  }
+  
+  /* カード型レイアウトの改善 */
+  .card {
+    background-color: var(--light-bg);
+    @apply rounded-lg shadow-md transition-all duration-300 hover:shadow-xl;
+  }
+  
+  .dark .card {
+    background-color: var(--dark-bg);
+    @apply shadow-lg;
+  }
+  
+  /* グラデーションエフェクト */
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  }
+  
+  /* カテゴリー別の色分け */
+  .category-grammar {
+    border-left: 4px solid var(--keigo-respectful);
+  }
+  
+  .category-business {
+    border-left: 4px solid var(--keigo-humble);
+  }
+  
+  .category-daily {
+    border-left: 4px solid var(--keigo-polite);
+  }
+}

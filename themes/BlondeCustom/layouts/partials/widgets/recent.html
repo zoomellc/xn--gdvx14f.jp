@@ -1,0 +1,21 @@
+{{ $filteredPosts := where .Site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ $relatedPosts := shuffle $filteredPosts | first 5 }}
+{{- if $relatedPosts }}
+<div class="bg-gradient-card bg-white panel mb-3 pb-5 dark:bg-warmgray-900 shadow-card rounded-lg border border-gray-100">
+    <p class="text-xl text-center text-primary-700 font-semibold py-5 dark:text-primary-300">Recent Posts</p>
+    <div class="mx-6">
+        {{ range $relatedPosts }}
+        <a href="{{ .RelPermalink }}" class="">
+            <div class="w-full block mt-3 p-3 rounded-lg bg-white hover:bg-primary-50 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800 transition-all hover:shadow-soft">
+                <div class="px-2">
+                    <div class="text-gray-900 font-bold text-lg dark:text-white hover:text-primary-600 transition-colors">{{.Title}}</div>
+                    <p class="text-sm text-gray-600 flex items-center pb-1 dark:text-gray-400">
+                        <time><span class="icon-access_time mr-1"></span>{{.Date.Format "2006/01/02"}}</time>
+                    </p>
+                </div>
+            </div>
+            {{- end }}
+        </a>
+        {{- end }}
+    </div>
+</div>

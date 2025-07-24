@@ -1,0 +1,32 @@
+{{ $type := .Get "type" | default "sonkeigo" }}
+{{ $size := .Get "size" | default "64" }}
+{{ $class := .Get "class" | default "" }}
+
+<span class="keigo-icon-wrapper inline-flex items-center justify-center {{ $class }}">
+  {{ if eq $type "sonkeigo" }}
+  <img src="/img/icons/sonkeigo-icon.svg" alt="尊敬語" width="{{ $size }}" height="{{ $size }}" class="keigo-icon animate-float">
+  {{ else if eq $type "kenjougo" }}
+  <img src="/img/icons/kenjougo-icon.svg" alt="謙譲語" width="{{ $size }}" height="{{ $size }}" class="keigo-icon animate-float">
+  {{ else if eq $type "teineigo" }}
+  <img src="/img/icons/teineigo-icon.svg" alt="丁寧語" width="{{ $size }}" height="{{ $size }}" class="keigo-icon animate-float">
+  {{ end }}
+</span>
+
+<style>
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.keigo-icon-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.keigo-icon-wrapper:hover {
+  transform: scale(1.1);
+}
+</style>

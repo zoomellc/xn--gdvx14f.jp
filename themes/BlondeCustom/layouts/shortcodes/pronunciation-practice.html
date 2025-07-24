@@ -1,0 +1,34 @@
+{{ $id := .Get "id" | default "pronunciation-practice" }}
+
+<div id="{{ $id }}"></div>
+
+<link rel="stylesheet" href="/css/pronunciation-practice.css">
+{{ if .Site.IsServer }}
+<script src="/js/pronunciation-practice.js"></script>
+{{ else }}
+<script src="/js/pronunciation-practice.min.js"></script>
+{{ end }}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new PronunciationPractice('{{ $id }}');
+});
+</script>
+
+<noscript>
+    <div class="pronunciation-practice-fallback">
+        <p>この機能を使用するにはJavaScriptを有効にしてください。</p>
+        <p>敬語の発音練習には、音声認識機能が必要です。</p>
+    </div>
+</noscript>
+
+<style>
+.pronunciation-practice-fallback {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    text-align: center;
+    color: #666;
+}
+</style>

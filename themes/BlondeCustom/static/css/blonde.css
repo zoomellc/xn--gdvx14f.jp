@@ -1,0 +1,116 @@
+/* Material Icons フォントはSVGアイコンに置き換えられました */
+
+/* content */
+
+.content li li {
+  margin-left: 0.8em;
+  font-size: 0.9em;
+}
+.content {
+  margin-bottom: 3em;
+}
+.content li {
+  font-size: 1.1em;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.content a {
+  color: #0066cc;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 102, 204, 0.3);
+}
+.content a:hover {
+  text-decoration: underline;
+  text-decoration-color: #0066cc;
+}
+.content p {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1.1em;
+  letter-spacing: 0.03em;
+}
+.content h1,.content h2,.content h3,.content h4,.content h5,.content h6 {
+  margin: 3em 0 .25em;
+}
+.content h1+h2, .content h2+h3, .content h3+h4, .content h4+h5, .content h5+h6, .content h2+h4, .content h3+h5, .content h4+h6 {
+  margin-top: 1em;
+}
+.content h1 {
+  font-size: 2.25rem;
+}
+.content h2 {
+  padding-top: 0.55em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  background-color: #f6f6f6;
+  border-left: 4px solid #222222;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+.dark .content h2 {
+  background-color: #1d2021;
+  border-left-color: #81786a;
+}
+.content h3 {
+  font-size: 1.5rem;
+  padding-bottom: 0.25em;
+  border-bottom: 2px solid #222;
+  font-weight: 700;
+}
+.dark .content h3 {
+  border-bottom-color: #81786a;
+}
+.content h4 {
+  font-size: 1.25rem;
+}
+.content h5 {
+  font-size: 1.125rem;
+}
+.content h6 {
+  font-size: 1rem;
+}
+.content b {
+  font-style: bold;
+}
+.content blockquote {
+  background-color: #edf2f7;
+  padding: 0.5rem 1rem;
+}
+.dark .content blockquote {
+  background-color: #1f2223;
+}
+/* テーブルスタイルはTailwindのユーティリティクラスで管理されています (render-table.html) */
+pre {
+  padding: 0.5rem;
+  max-width: 64em;
+  overflow: auto;
+}
+ol {
+  margin-left: 1em;
+  list-style-type: decimal;
+}
+.footnotes {
+  margin-top: 1rem;
+}
+blockquote {
+  margin: 0.8rem 0;
+}
+iframe {
+  margin: 0.8rem 0;
+}
+.s_video_simple {
+  margin: 0.8rem 0;
+}
+table {
+  margin-bottom: 0.8rem;
+}
+.highlight {
+  margin-bottom: 0.8rem;
+}
+ul {
+  list-style: inside;
+}
+input,
+textarea {
+  -webkit-appearance: none;
+}

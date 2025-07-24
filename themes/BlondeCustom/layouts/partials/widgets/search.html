@@ -1,0 +1,10 @@
+<div class="mb-3 bg-gradient-card bg-white dark:bg-warmgray-900 shadow-card rounded-lg border border-gray-100 p-4">
+    <form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+        <label>
+            <input class="w-full p-3 focus:outline-none dark:bg-warmgray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-300 rounded-lg border-2 border-gray-200 focus:border-primary-400 transition-all duration-200 shadow-inner hover:border-primary-300" type="search"
+                placeholder="Search..." value="" name="q" aria-label="Search">
+        </label>
+        <input class="hidden" type="submit" value="Search">
+        <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL }}" />
+    </form>
+</div>

@@ -1,0 +1,18 @@
+{{ if .Site.Taxonomies.tags }}
+<div class="bg-gradient-card bg-white panel mb-3 dark:bg-warmgray-900 shadow-card rounded-lg border border-gray-100">
+    <p class="text-xl text-center text-primary-700 font-semibold py-3 pl-3 dark:text-primary-300">Tags</p>
+    <div class="panel-block p-2">
+        {{- $.Scratch.Set "myLimit" 0 }}
+        {{- range $termName, $entries := .Site.Taxonomies.tags }}
+        {{- $.Scratch.Set "myLimit" (add ($.Scratch.Get "myLimit") 1) }}
+        {{- if le ($.Scratch.Get "myLimit") ($.Site.Param `tagslimit`) }}
+        <a href="{{ "/tags/" | relLangURL }}{{ $termName | urlize }}">
+            <span
+                class="duration-200 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-secondary-50 justify-center h-8 px-3 text-secondary-600 hover:text-secondary-900 hover:bg-secondary-100 dark:bg-warmgray-800 rounded-full transition-all hover:scale-105 hover:shadow-soft border border-secondary-200">
+                {{ $termName }}
+            </span></a>
+        {{- end }}
+        {{- end }}
+    </div>
+</div>
+{{ end }}

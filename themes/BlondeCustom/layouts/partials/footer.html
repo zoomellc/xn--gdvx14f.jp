@@ -1,0 +1,19 @@
+<footer class="{{ .Site.Params.base_color }} text-white p-6 shadow-inner border-t-4 border-accent-400/20">
+    {{ if .Site.Menus.foot }}
+    <div class="flex justify-center w-full md:flex md:flex-row sm:items-center sm:w-auto mb-4">
+        <div>
+            {{ range .Site.Menus.foot }}
+            <a href="{{ .URL }}"
+                class="no-underline block sm:inline-block duration-200 text-white hover:text-accent-200 mx-2 px-3 py-1 rounded-lg hover:bg-white/10 transition-all">
+                {{ .Name }}
+            </a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+    <div class="container max-w-screen-xl mr-auto ml-auto">
+        <p class="text-center md:text-left">&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}" class="duration-200 hover:text-accent-200 font-semibold">{{ .Site.Title }}</a></p>
+        <p class="text-center md:text-left text-sm text-white/80">Powered by <a href="https://gohugo.io/" class="duration-200 hover:text-accent-200 underline decoration-dotted underline-offset-2">Hugo</a>, Theme <a
+                href="https://github.com/opera7133/Blonde" class="duration-200 hover:text-accent-200 underline decoration-dotted underline-offset-2">Blonde</a>.</p>
+    </div>
+</footer>

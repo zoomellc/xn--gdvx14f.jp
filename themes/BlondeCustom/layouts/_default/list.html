@@ -1,0 +1,103 @@
+{{ define "header_css" }}{{ end }}
+
+{{ define "main" }}
+<div class="grid grid-cols-3 gap-4">
+  {{ if .Site.Params.widgets.display }}
+  <div class="col-span-3 lg:col-span-2 mb-3">
+  {{ else }}
+  <div class="col-span-3 mb-3">
+  {{ end }}
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-4xl dark:text-white">{{if not .IsHome}}{{ humanize .Title }}{{end}}</h2>
+      <div class="hidden md:flex items-center space-x-2">
+        <button id="gridViewBtn" class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Grid View">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM13 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2h-2zM13 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2h-2z"/>
+          </svg>
+        </button>
+        <button id="listViewBtn" class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="List View">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    {{if .IsHome}}
+    {{.Scratch.Set "Paginator" (.Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections) (.Site.Params.paginator_pages) )}}
+    {{else}}
+    {{.Scratch.Set "Paginator" .Paginator}}
+    {{end}}
+    {{$paginator:=(.Scratch.Get "Paginator")}}
+    <div id="articleList" class="articles-list">
+      {{ range $paginator.Pages }}
+      <a href="{{.RelPermalink}}" class="article-link">
+        {{ .Render "summary" }}
+      </a>
+      {{ end }}
+    </div>
+    {{ partial "paginator.html" . }}
+  </div>
+  {{ if .Site.Params.widgets.display }}
+    {{ partial "widgets.html" . }}
+  {{ end }}
+</div>
+
+<style>
+  /* グリッドビューのスタイル */
+  .articles-list.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .articles-list.grid-view .article-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* アクティブビューボタンのスタイル */
+  .view-btn-active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .dark .view-btn-active {
+    background-color: var(--primary-color);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const gridViewBtn = document.getElementById('gridViewBtn');
+    const listViewBtn = document.getElementById('listViewBtn');
+    const articleList = document.getElementById('articleList');
+    
+    // LocalStorageから保存されたビューを取得
+    const savedView = localStorage.getItem('articleView') || 'list';
+    
+    // 初期ビューの設定
+    if (savedView === 'grid') {
+      articleList.classList.add('grid-view');
+      gridViewBtn.classList.add('view-btn-active');
+    } else {
+      listViewBtn.classList.add('view-btn-active');
+    }
+    
+    // グリッドビューボタンのクリックイベント
+    gridViewBtn.addEventListener('click', function() {
+      articleList.classList.add('grid-view');
+      gridViewBtn.classList.add('view-btn-active');
+      listViewBtn.classList.remove('view-btn-active');
+      localStorage.setItem('articleView', 'grid');
+    });
+    
+    // リストビューボタンのクリックイベント
+    listViewBtn.addEventListener('click', function() {
+      articleList.classList.remove('grid-view');
+      listViewBtn.classList.add('view-btn-active');
+      gridViewBtn.classList.remove('view-btn-active');
+      localStorage.setItem('articleView', 'list');
+    });
+  });
+</script>
+{{ end }}

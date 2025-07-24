@@ -1,0 +1,28 @@
+{{ $width := .Get "width" | default "100%" }}
+{{ $class := .Get "class" | default "" }}
+
+<div class="keigo-infographic-wrapper my-8 {{ $class }}">
+  <img 
+    src="/img/keigo-infographic.svg" 
+    alt="敬語の種類と関係性の説明図" 
+    width="{{ $width }}"
+    class="keigo-infographic mx-auto rounded-lg shadow-lg"
+    loading="lazy"
+  >
+</div>
+
+<style>
+.keigo-infographic-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.keigo-infographic {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.keigo-infographic:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+</style>

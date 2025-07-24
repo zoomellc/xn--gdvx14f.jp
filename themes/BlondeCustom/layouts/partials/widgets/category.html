@@ -1,0 +1,10 @@
+{{ if .Site.Taxonomies.categories }}
+<div class="bg-gradient-card bg-white panel mb-3 pb-5 dark:bg-warmgray-900 shadow-card rounded-lg border border-gray-100">
+    <p class="text-xl text-center text-primary-700 font-semibold py-5 dark:text-primary-300">Categories</p>
+    {{ range $key, $value := .Site.Taxonomies.categories }}
+    <a class="text-center block duration-200 py-2 px-4 mx-4 rounded-lg hover:bg-primary-50 hover:text-primary-700 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800 transition-all hover:scale-105 hover:shadow-soft"
+        href="{{ $.Site.BaseURL }}/categories/{{ $key | urlize  }}">{{ $key | humanize }}</a>
+
+    {{ end }}
+</div>
+{{ end }}
