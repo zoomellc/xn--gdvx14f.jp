@@ -17,7 +17,6 @@ hasCJKLanguage = true
     paginator_pages = "10"
     archive_dropdown = "false"
     tagsLimit = 0
-    darkmode = "light"
     back_to_home = "ホームに戻る"
 
     [params.post]

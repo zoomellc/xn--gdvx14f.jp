@@ -32,9 +32,6 @@ blockquote {
   border-color: #e2e8f0;
 }
 
-.dark .content td {
-  border-color: #26272a;
-}
 
 .content a {
 	text-decoration: underline;

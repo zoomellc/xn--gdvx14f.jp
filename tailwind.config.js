@@ -1,6 +1,5 @@
 module.exports = {
   content: ["./**/*.html", "config.toml"],
-  darkMode: "class",
   theme: {
     extend: {
       colors: {
