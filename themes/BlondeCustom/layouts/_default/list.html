@@ -55,6 +55,18 @@
     color: inherit;
   }
   
+  /* リストビューでのレイアウト調整 */
+  .articles-list:not(.grid-view) .article-link > div {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  
+  .articles-list:not(.grid-view) .article-link img {
+    width: 200px !important;
+    height: 150px !important;
+    flex-shrink: 0;
+  }
+  
   /* アクティブビューボタンのスタイル */
   .view-btn-active {
     background-color: var(--primary-color);
